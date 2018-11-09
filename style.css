@@ -1,3 +1,7 @@
+body{
+  background-color: #EEE;
+  font-family: fantasy;
+}
 #header {
   background-color: #f7000;
   color: #000000;
@@ -5,7 +9,55 @@
 }
 #container {
   background-color: white;
-  width: 750px;
+  width: 820px;
   margin-left: auto;
   margin-right: auto;
+}
+#content{
+  padding: 10px;
+}
+#list{
+  width: 400px;
+  float: left;
+}
+#rand{
+  width: 400px;
+  float: right;
+}
+#container2{
+  clear: both;
+  background-color: white;
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#content2{
+  padding: 10px;
+}
+#places{
+  width: 400px;
+  float: left;
+}
+#standards{
+  width: auto;
+  float: right;
+}
+#hamlet{
+  clear: both;
+
+}
+#footer1{
+  clear: both;
+}
+#footer_main{
+  clear: both;
+}
+#standards{
+  clear: both;
+}
+#picture{
+  clear: both;
+}
+#football{
+  clear: both;
 }
