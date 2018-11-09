@@ -27,11 +27,11 @@ body{
 #places{
   width: 400px;
   text-align: center;
+  float: none;
 }
 #standards{
   clear: both;
   width: auto;
-  float: right;
 }
 #hamlet{
   clear: both;
