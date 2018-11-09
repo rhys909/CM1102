@@ -1,6 +1,6 @@
 body{
   background-color: #EEE;
-  font-family: fantasy;
+  font-family: sans-serif;
 }
 #header {
   background-color: #f7000;
@@ -24,40 +24,39 @@ body{
   width: 400px;
   float: right;
 }
-#container2{
-  clear: both;
-  background-color: white;
-  width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
-#content2{
-  padding: 10px;
-}
 #places{
   width: 400px;
-  float: left;
+  text-align: center;
 }
 #standards{
+  clear: both;
   width: auto;
   float: right;
 }
 #hamlet{
   clear: both;
-
+  text-align: center;
 }
 #footer1{
   clear: both;
+  text-align: center;
 }
 #footer_main{
   clear: both;
+  text-align: center;
 }
 #standards{
   clear: both;
+  text-align: center;
 }
 #picture{
   clear: both;
 }
 #football{
   clear: both;
+  text-align: center;
+}
+table.center{
+  margin-left: auto;
+  margin-right: auto;
 }
