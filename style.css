@@ -60,3 +60,11 @@ table.center{
   margin-left: auto;
   margin-right: auto;
 }
+ol.center{
+  margin-left: auto;
+  margin-right: auto;
+}
+dl.center{
+  margin-left: auto;
+  margin-right: auto;
+}
