@@ -89,12 +89,13 @@ nav{
   height: 100px;
   box-sizing: border-box;
   padding: 10px 100px;
+  padding-bottom: 10px;
   transition: .2s;
 }
 nav.black{
   background: black;
-  height: 100px;
-  padding: 10px 100px;
+  height: 85px;
+  padding: 1px 10px;
 }
 
 nav.black .Napster{
@@ -118,6 +119,78 @@ section.footer{
   text-align: center;
   align-items: center;
 }
-.footer img{
-  align-items: center;
+
+.text-center h1{
+  clear: both;
+  font-size: 50px;
+  float: none;
+  align-content: center;
+  text-align: center;
+  font-weight: 40;
+  font-family: 'Orbitron', sans-serif;
+  padding-bottom: 10px;
+}
+table{
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 30px;
+  line-height: 40px;
+  align-content: center;
+  font-family: 'Orbitron', sans-serif;
+  border-collapse: collapse;
+  text-align: center;
+  border: white;
+}
+table a{
+  text-decoration: none;
+  color: white;
+}
+table a:hover{
+  color: #2f43b4;
+}
+.intro p a:hover{
+  color: #2f43b4;
+}
+nav ul li a:hover{
+  color: #2f43b4;
+}
+.footer{
+  clear: both;
+  padding-top: 10px;
+}
+.footer p a{
+  text-decoration: none;
+  font-weight: 500;
+  color: white;
+}
+.footer a:hover{
+  color: #2f43b4;
+}
+.Developers{
+  clear: both;
+}
+.Developers img{
+  border-radius: 20px;
+  align-content: center;
+  float: left;
+  width: 30%
+}
+.Developers p{
+  float: right;
+  width: 70%;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 30px;
+  line-height: 40px;
+}
+section.funny {
+  width: 100%;
+  height: 100vh;
+  background: url(Toy_Story.gif);
+  background-size: 100% 100%;
+  background-position: center;
+  padding: 0px;
+}
+.Napster a{
+  text-decoration: none;
+  color: white;
 }
