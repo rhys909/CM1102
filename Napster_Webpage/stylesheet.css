@@ -46,7 +46,7 @@ section.image{
   margin-top: 80px;
 }
 .intro p{
-  width: 800px;
+  width: 80%;
   margin: 30px auto;
   text-align: justify;
   font-size: 30px;
@@ -65,9 +65,7 @@ section.intro {
   font-size: 20px;
   width: 100%;
 }
-.intro p a{
-  color: white;
-}
+
 nav.Napster {
   font-family: 'Orbitron', sans-serif;
   padding: 12px 2px;
@@ -177,7 +175,8 @@ nav ul li a:hover{
 }
 .Developers p{
   float: right;
-  width: 70%;
+  width: 60%;
+  padding-left: 10%;
   font-family: 'Orbitron', sans-serif;
   font-size: 30px;
   line-height: 40px;
@@ -193,4 +192,42 @@ section.funny {
 .Napster a{
   text-decoration: none;
   color: white;
+}
+.legal_battle{
+  align-content: center;
+}
+.legal_battle p{
+  font-family: 'Orbitron', sans-serif;
+  font-size: 30px;
+  line-height: 40px;
+  text-align: justify;
+  margin: 30px auto;
+  width: 80%;
+
+}
+.legal_battle p a{
+  text-decoration: none;
+  color: white;
+}
+.legal_battle p a:hover{
+  color: #2f43b4;
+}
+.legal_battle ol{
+  font-family: 'Orbitron', sans-serif;
+  padding-bottom: 10px;
+}
+.legal_battle ol li{
+  font-family: 'Orbitron', sans-serif;
+  font-size: 30px;
+  line-height: 40px;
+  width: 80%;
+  margin: 30px auto;
+}
+.legal_battle iframe{
+  align: middle;
+  margin: 30px auto;
+  padding-left: 20%;
+  padding-right: 20%;
+  width: 60%;
+  height: 100vh;
 }
