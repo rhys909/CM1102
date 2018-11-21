@@ -1,0 +1,67 @@
+body{
+  color: #686868;
+  font-family: 'Indie Flower', cursive;
+  padding: 0;
+  margin: 0;
+}
+nav{
+  height: 100px;
+  background-color: #ffd747;
+}
+nav h1{
+  font-family: 'Indie Flower', cursive;
+  color: #686868;
+  font-size: 40px;
+  margin: 0;
+  padding: 12px 30px;
+  float: left;
+}
+nav ul li{
+  list-style: none;
+}
+nav ul li a{
+  list-style: none;
+  text-decoration: none;
+  font-size: 40px;
+  font-family: 'Indie Flower', cursive;
+  padding: 12px 30px;
+  float: right;
+  color: #686868;
+  text-transform: uppercase;
+}
+section.image{
+  padding-top: 80px;
+  width: 100%;
+  height: 100vh;
+  background: url(python.jpg);
+  background-size: 100% 100%;
+  background-position: center;
+
+}
+.footer p{
+  font-family: 'Indie Flower', cursive;
+  font-size: 30px;
+  color: inherit;
+}
+.footer {
+  background-color: #ffd747;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  clear: both;
+  padding-left: 0;
+  padding-right: 0;
+}
+.footer a{
+  font-family: inherit;
+  text-decoration: none;
+  color: #686868;
+}
+.footer a:hover{
+  color: #366996
+}
+nav ul li a:hover{
+  color: #366996
+}
