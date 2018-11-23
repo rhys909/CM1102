@@ -4,14 +4,18 @@ body{
   padding: 0;
   margin: 0;
 }
+
+
 nav{
+  font-family: inherit;
+  color: #686868;
+  box-sizing: border-box;
+  top: 0;
   height: 100px;
-  background-color: #ffd747;
+  padding-bottom: 5px;
 }
 nav h1{
-  font-family: 'Indie Flower', cursive;
-  color: #686868;
-  font-size: 40px;
+  font-size: 30px;
   margin: 0;
   padding: 12px 30px;
   float: left;
@@ -22,22 +26,30 @@ nav ul li{
 nav ul li a{
   list-style: none;
   text-decoration: none;
-  font-size: 40px;
-  font-family: 'Indie Flower', cursive;
+  font-size: 20px;
   padding: 12px 30px;
   float: right;
   color: #686868;
   text-transform: uppercase;
 }
+nav ul li a:hover{
+  color: #0061ff;
+}
+nav h1 a{
+  color: inherit;
+  text-decoration: none;
+}
+
+
 section.image{
-  padding-top: 80px;
   width: 100%;
   height: 100vh;
   background: url(python.jpg);
   background-size: 100% 100%;
   background-position: center;
-
 }
+
+
 .footer p{
   font-family: 'Indie Flower', cursive;
   font-size: 30px;
@@ -51,8 +63,6 @@ section.image{
   padding: 0;
   margin: 0;
   clear: both;
-  padding-left: 0;
-  padding-right: 0;
 }
 .footer a{
   font-family: inherit;
@@ -60,8 +70,16 @@ section.image{
   color: #686868;
 }
 .footer a:hover{
-  color: #366996
+  color: #0061ff;
 }
-nav ul li a:hover{
-  color: #366996
+
+
+.random{
+  width: 100%;
+  height: 100vh;
+  background: url(Toy_Story.gif);
+  background-size: 100% 100%;
+  background-position: center;
+  padding: 0;
+  margin: 0;
 }

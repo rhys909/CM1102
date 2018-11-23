@@ -1,0 +1,47 @@
+.developer h1{
+  font-family: inherit;
+  font-size: 40px;
+  clear: both;
+  padding-bottom: 10px;
+}
+.developer #body_dev{
+  clear: both;
+  padding-bottom: 20px;
+}
+.developer #body_dev p{
+  width: 60%;
+  font-family: inherit;
+  font-size: 20px;
+  line-height: 30px;
+  float: left;
+  padding-bottom: 10px;
+  padding-right: 2%;
+  padding-left: 1%;
+}
+.developer #bodydev ul{
+  font-family: inherit;
+  font-size: 20px;
+  line-height: 30px;
+  width: 60%;
+  float: left;
+  list-style: circle;
+  clear: left;
+}
+.developer #bodydev ul li{
+  color: inherit;
+  text-align: justify;
+  text-emphasis: bold;
+}
+.developer #body_dev img {
+  width: 37%;
+  float: right;
+  border-radius: 20px;
+  height: 100vh;
+}
+.developer #body_dev p a{
+  text-decoration: none;
+  color: inherit;
+}
+.developer #body_dev p a:hover{
+  color: #0061ff;
+}
