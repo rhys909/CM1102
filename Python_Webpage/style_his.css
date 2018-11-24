@@ -1,0 +1,15 @@
+.table table{
+  background-color: #ffd747;
+  border: 1px;
+  border-collapse: collapse;
+  border-radius: 5px;
+}
+.table thead{
+  color: inherit;
+}
+.table td{
+  color: inherit;
+}
+.table th{
+  color: inherit;
+}
