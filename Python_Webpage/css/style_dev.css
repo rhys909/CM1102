@@ -18,7 +18,7 @@
   padding-right: 2%;
   padding-left: 1%;
 }
-.developer #bodydev ul{
+.developer #body_dev ul{
   font-family: inherit;
   font-size: 20px;
   line-height: 30px;
@@ -27,10 +27,10 @@
   list-style: circle;
   clear: left;
 }
-.developer #bodydev ul li{
+.developer #body_dev ul li{
   color: inherit;
   text-align: justify;
-  text-emphasis: bold;
+  font-weight: bold;
 }
 .developer #body_dev img {
   width: 37%;

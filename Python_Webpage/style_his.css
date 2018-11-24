@@ -1,0 +1,7 @@
+.table{
+  border-collapse: collapse;
+}
+.table thead{
+  background-color: #ffd747;
+  color: inherit;
+}
