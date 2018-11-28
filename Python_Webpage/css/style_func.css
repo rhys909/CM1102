@@ -25,6 +25,7 @@
 }
 #func_Body p a{
   text-decoration: none;
+  color: inherit;
 }
 #func_Body p a:hover{
   color: #0061ff;
