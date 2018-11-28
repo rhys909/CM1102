@@ -12,6 +12,9 @@ nav{
   top: 0;
   height: 100px;
   padding-bottom: 5px;
+  display: inline-block;
+  background-color: #ffd747;
+  width: 100%;
 }
 nav h1{
   font-size: 30px;
