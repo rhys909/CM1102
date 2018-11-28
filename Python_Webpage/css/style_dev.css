@@ -24,8 +24,8 @@
   line-height: 30px;
   width: 60%;
   float: left;
-  list-style: circle;
   clear: left;
+  list-style-image: inherit;
 }
 .developer #body_dev ul li{
   color: inherit;

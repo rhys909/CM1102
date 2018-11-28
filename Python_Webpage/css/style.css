@@ -5,7 +5,6 @@ body{
   margin: 0;
 }
 
-
 nav{
   font-family: inherit;
   color: #686868;
@@ -64,6 +63,9 @@ section.image{
   margin: 0;
   clear: both;
   padding-bottom: 0px;
+  margin-bottom: 0;
+  position: absolute;
+  display: inline-block;
 }
 .footer a{
   font-family: inherit;

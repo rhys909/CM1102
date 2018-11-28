@@ -1,3 +1,6 @@
+#func_Body{
+  clear: both;
+}
 #func_Body h1{
   font-family: inherit;
   font-weight: bold;
@@ -5,6 +8,7 @@
   float: left;
   padding bottom: 20px;
   clear: both;
+  padding-left: 1%;
 }
 #func_Body h2{
   font-size: 40px;
@@ -26,6 +30,7 @@
 #func_Body p a{
   text-decoration: none;
   color: inherit;
+  font-weight: bold;
 }
 #func_Body p a:hover{
   color: #0061ff;
@@ -33,14 +38,18 @@
 }
 #func_Body ul{
   font-size: 30px;
-  padding-left: 6%;
-  padding-bottom: 10px;
+  padding-left: 5%;
+  padding-bottom: 1px;
   clear: both;
+  list-style-position: inside;
+  list-style-image: inherit;
 }
 #func_Body ul li{
   font-size: inherit;
   padding-left: inherit;
   line-height: 40px;
+  list-style-type: circle;
+  list-style-position: inside;
 }
 #func_Body ul li a{
   text-decoration: none;
@@ -48,4 +57,34 @@
 }
 #func_Body ul li a:hover{
   color: #0061ff;
+}
+#Uses_body{
+  clear: both;
+  display: inline-block;
+}
+#Uses_body h2{
+  font-size: 40px;
+  font-family: inherit;
+  float: left;
+  padding-left: 2%;
+  padding-bottom: 10px;
+  clear: both;
+}
+#Uses_body p{
+  font-family: inherit;
+  font-size: 30px;
+  line-height: 40px;
+  float: left;
+  padding-left: 4%;
+  padding-bottom: 10px;
+  clear: both;
+}
+#Uses_body p a{
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+}
+#Uses_body p a:hover{
+  color: #0061ff;
+  text-decoration: inherit;
 }
