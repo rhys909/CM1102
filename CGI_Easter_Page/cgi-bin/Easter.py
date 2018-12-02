@@ -8,6 +8,8 @@ if y.isalpha() == True:
     return y
 else:
     print("<h2> This is not a valid year.</h2>")
+month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+
 
 def Easter_Numeric(y):
     a = y % 19
@@ -23,9 +25,10 @@ def Easter_Numeric(y):
     r = (2 * e + 2 * j - k - h + m + 32) % 7
     n = (h - m + r + 90) // 25
     p = (h - m + r + n + 19) % 32
-    date_of_easter_num = datetime.date(year=y,month=n,day=p))
+    date_of_easter_num = datetime.date(year=y,month=n,day=p)
+    print(date_of_easter_num)
 
-def Easter_String_String(y):
+def Easter_String(y):
     a = y % 19
     b = y // 100
     c = y % 100
@@ -39,9 +42,20 @@ def Easter_String_String(y):
     r = (2 * e + 2 * j - k - h + m + 32) % 7
     n = (h - m + r + 90) // 25
     p = (h - m + r + n + 19) % 32
-    x = datetime.date(year=y,month=n,day=p)
-    date_of_easter_str = datetime.strptime(x, %d %B %Y))
-    return date_of_easter_str
+    z = datetime.date(month=n)
+    x = int(str(p)[1])
+    if x == 1:
+        sup = "st"
+    elif x == 2:
+        sup = "nd"
+    elif x == 3:
+        sup = "rd"
+    else:
+        sup = "th"
+
+    print(str(p) + sup + ' of ' + str(month[(z-1)]) + ' ' + str(y))
+
+
 
 print('Content-Type: text/html; charset=utf-8')
 print('')
