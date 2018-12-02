@@ -7,3 +7,7 @@ body{
   color: red;
   padding-left: 2%;
 }
+
+form{
+  font-size: 20px;
+}
