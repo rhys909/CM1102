@@ -1,4 +1,4 @@
-#
+#!/usr/bin/python3
 import cgi, cgitb
 import datetime
 form = cgi.FieldStorage()
@@ -7,7 +7,7 @@ if y.isalpha() == True:
     y = int(y)
     return y
 else:
-    print("<p> This is not a valid year.</p>")
+    print("<h2> This is not a valid year.</h2>")
 
 def Easter_Numeric(y):
     a = y % 19
@@ -23,9 +23,9 @@ def Easter_Numeric(y):
     r = (2 * e + 2 * j - k - h + m + 32) % 7
     n = (h - m + r + 90) // 25
     p = (h - m + r + n + 19) % 32
-    print(datetime.date(year=y,month=n,day=p))
+    date_of_easter_num = datetime.date(year=y,month=n,day=p))
 
-def Easter_String(y):
+def Easter_String_String(y):
     a = y % 19
     b = y // 100
     c = y % 100
@@ -40,9 +40,18 @@ def Easter_String(y):
     n = (h - m + r + 90) // 25
     p = (h - m + r + n + 19) % 32
     x = datetime.date(year=y,month=n,day=p)
-    print(datetime.strptime(x, %d %B %Y))
+    date_of_easter_str = datetime.strptime(x, %d %B %Y))
+    return date_of_easter_str
 
 print('Content-Type: text/html; charset=utf-8')
 print('')
 print('<!DOCTYPE html>')
-print('<HTML>')
+print('<html>')
+print('<head><title> Python Script</title><head>')
+print('<body>')
+print('<p>')
+print('Easter in the year' + y + 'will fall on' + date_of_easter + '.')
+print('<p>')
+print('</p>')
+print('</body>')
+print('</html>')
