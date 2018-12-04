@@ -9,15 +9,16 @@
 
   <body>
     <h1>This webapage will find the date of Easter in a given year for you!</h1>
-    <form action="cgi-bin/Easter.py" align="middle">
-      <label for="year">What Easter do you want to know?</label>
+    <form action="cgi-bin/Easter.py" method="get">
+      <label for="year">What Easter do you want to know?<br></label>
       <input type="text" name="year" id="year" size="4"/>
       <select name="Format">
         <option value="numeric">dd-mm-yyyy</option>
         <option value="string">dd-Month-yyyy</option>
         <option value="both">Both Formats</option>
       </select><br>
-      <input type="submit" value="submit"/>
+      <input type="submit" value="Submit">
+      <input type="reset">
     </form>
   </body>
 </html>
