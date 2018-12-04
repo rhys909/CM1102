@@ -6,10 +6,19 @@ body{
   background-color: white;
   color: red;
   padding-left: 2%;
+  align-items: center;
+}
+h1{
+  width: 400px;
+  padding-left: 50px;
+  text-align: justify;
 }
 form{
   align-content: center;
-  padding: 20%;
+  height: 400px;
+  width: 400px;
+  padding: 50px;
+  padding-right: 50px;
   background-color: black;
   color: white;
 }
