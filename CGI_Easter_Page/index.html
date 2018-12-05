@@ -2,13 +2,19 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="Easter" content="width = device-width, initial-scale=1.0">
     <title>Easter Calculator</title>
     <link rel="stylesheet" href="style.css">
   </head>
 
 
   <body>
-    <h1>This webapage will find the date of Easter in a given year for you!</h1>
+    <nav>
+      <ul>
+        <li style="float:left">Easter Calculator!</li>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </nav>
     <form action="cgi-bin/Easter.py" method="post">
       <label for="year">What Easter do you want to know?<br></label>
       <input type="text" name="year" id="year" size="4" required/>
@@ -17,8 +23,7 @@
         <option value="string">dd-Month-yyyy</option>
         <option value="both">Both Formats</option>
       </select><br>
-      <input type="submit" value="Submit"/>
-      <input type="reset"/>
+      <input type="submit" value="Submit" id="Submit"/>
     </form>
   </body>
 </html>
