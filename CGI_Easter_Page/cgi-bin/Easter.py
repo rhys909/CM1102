@@ -22,8 +22,10 @@ def Easter_Numeric(y):
     r = (2 * e + 2 * j - k - h + m + 32) % 7
     n = (h - m + r + 90) // 25
     p = (h - m + r + n + 19) % 32
-    date_of_easter_num = str(p) + '/' + '0' + str(n) + '/' + str(y)
-    print(date_of_easter_num)
+    if p < 10:
+        print('Easter will fall on the 0' + str(p) + '/' + '0' + str(n) + '/' + str(y))
+    else:
+        print('Easter will fall on the ' + str(p) + '/' + '0' + str(n) + '/' + str(y))
 
 def Easter_String(y):
     a = y % 19
@@ -53,7 +55,7 @@ def Easter_String(y):
     else:
         sup = 'th'
 
-    print(str(p) + '<sup>' + sup + '</sup>' + ' of ' + str(n) + ' ' + str(y))
+    print('Easter will fall on the ' + str(p) + '<sup>' + sup + '</sup>' + ' of ' + str(n) + ' ' + str(y))
 
 print('Content-Type: text/html; charset=utf-8')
 print('')
