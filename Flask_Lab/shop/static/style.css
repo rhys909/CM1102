@@ -1,0 +1,26 @@
+body {
+  font-family: cursive;
+  background-color: #fff6ff;
+}
+
+h1 {
+  padding-left: 20px;
+  font-family: inherit;
+  color: red;
+}
+
+a {
+  text-decoration: none;
+  color: red;
+}
+
+a:hover {
+  color: purple;
+}
+
+#header {
+  padding: 10px 100px;
+  font-size: 18px;
+  overflow:auto;
+  background-color: #000011;
+}
