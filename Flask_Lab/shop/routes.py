@@ -1,4 +1,6 @@
 from flask import Flask, render_template, url_for
+from shop.models import Author, Book
+
 app = Flask(__name__, static_folder="static")
 
 @app.route("/")
@@ -8,3 +10,5 @@ def home():
 @app.route("/about")
 def about():
     return render_template('about.html', title='About Us')
+
+books = Book.query.all()
