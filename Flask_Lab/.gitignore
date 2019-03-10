@@ -1,0 +1,7 @@
+__pycache__/
+shop/__pycache__/
+.pyc
+venv/
+.cfg
+shop/venv/
+shop/.git/

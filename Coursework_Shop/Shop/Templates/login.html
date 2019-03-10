@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block content %}
+<form action="" method="POST">
+  {{ form.csrf_token }}
+  <section class="">
+    {{ form.email.label }} {{ form.email }}
+  </section>
+  <section class="">
+    {{ form.password.label }} {{ form.password }}
+  </section>
+  <section class="">
+    {{ form.submit() }}
+  </section>
+</form>
+{% for error in form.username.errors %}
+  <span style="color: red;">[{{ error }}]</span>
+  {% endfor %}
+{% for error in form.password.errors %}
+  <span style="color: red;">[{{ error }}]</span>
+  {% endfor %}
+{% endblock content %}

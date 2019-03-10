@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block content %}
+<form method="POST" action="">
+  {{ form.csrf_token }}
+    <section class="">
+      {{ form.username.label }} {{ form.username}}
+    </section>
+    <section class="">
+      {{ form.email.label }} {{ form.email}}
+    </section>
+    <section class="">
+      {{ form.password.label }} {{ form.password}}
+    </section>
+    <section class="">
+      {{ form.confirm_password.label }} {{ form.confirm_password}}
+    </section>
+    <section class="">
+      {{ form.submit() }}
+    </section>
+  {% for error in form.username.errors %}
+    <span style="color: red;">[{{ error }}]</span>
+    {% endfor %}
+  {% for error in form.password.errors %}
+    <span style="color: red;">[{{ error }}]</span>
+    {% endfor %}
+{% endblock content %}
