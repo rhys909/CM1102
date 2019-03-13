@@ -1,21 +1,27 @@
 import os
 from flask import render_template, url_for, request, redirect, flash
-from shop import app, db
-from shop.models import Manufacturer, Items, User
-from shop.form import sign_up_form, login_form
+from Shop import app, db
+from Shop.models import Manufacturer, Part, User
+from Shop.form import sign_up_form, login_form
 from flask_login import login_user, current_user, logout_user, login_required
 
 @app.route("/")
+
 @app.route("/home")
 def home():
-    return render_template('home.html', Items = items, title='PC Store - Home')
+    return render_template('home.html',  title='PC Store - Home')
+
 @app.route("/about")
 def about():
     return render_template('about.html', title='PC Store - About')
+
 @app.route("/item_page")
 def item_page():
     return render_template('item_page.html', title='PC Store - Items')
-@app.route()
+@app.route("/shop")
+def shop():
+    return render_template('shop.html', title='PC Store - Shop')
+
 @app.route("/sign_up", methods=['GET', 'POST'])
 def sign_up():
     form = sign_up_form
@@ -25,6 +31,7 @@ def sign_up():
         db.session.commit()
         return redirect(url_for('home'))
     return render_template('sign_up.html', title='PC Store - Sign Up', form=form)
+
 @app.route("/login", methods=['GET', 'POST'])
 def login():
     form= login_form()
@@ -43,13 +50,14 @@ def logout():
     logout_user()
     return redirect(url_for('home'))
 
-@app.route("/add_to_basket/<int:item_id>")
-def add_to_basket(item_id):
+@app.route("/add_to_basket/<int:part_id>")
+def add_to_basket(part_id):
     if "basket" not in session:
         session["basket"] = []
-    session["basket"].append(item_id)
+    session["basket"].append(part_id)
     flash("The item has been added to your shopping basket!")
     return redirect("/basket")
+
 @app.route("/basket", methods=['GET', 'POST'])
 def basket_display():
     if "cart" not in session:

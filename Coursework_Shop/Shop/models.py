@@ -1,5 +1,5 @@
 from datetime import datetime
-from shop import db, login_manager
+from Shop import db, login_manager
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import UserMixin
 
@@ -14,11 +14,12 @@ class Manufacturer(db.Model):
 class Part(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(70),nullable=False)
+    category = db.Column(db.String(15), nullable=False)
     description = db.Column(db.String(200), nullable=False)
     price = db.Column(db.Numeric(10,2), nullable=False)
     image_file = db.Column(db.String(20), nullable=False, default='No_Image.png')
     stock_level = db.Column(db.Integer, nullable=False)
-    Manufacturer_ID = dbColumn(db.Integer, db.ForeignKey('Manufacturer.id'), nullable=False)
+    Manufacturer_ID = db.Column(db.Integer, db.ForeignKey('Manufacturer.id'), nullable=False)
 
     def __repr__(self):
         return f"Item('{self.name}', '{self.description}', '{self.price}', '{self.stock_level}')"

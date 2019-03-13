@@ -1,6 +1,9 @@
 {% extends "layout.html" %}
+
 {% block content %}
+
 <h1>My PC Shop</h1>
+
   {% for item in items %}
   <a href="{{ url_for('item', item_id=item.id) }}"><img src = "{{ url_for('static', filename= item.image_file) }}"></a>
     <a href="{{ url_for('item', item_id=item.id) }}">
