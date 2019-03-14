@@ -8,6 +8,7 @@ nav {
     padding: 0;
     display: flex;
     background-color: #2071a6;
+    width: 100%;
 }
 nav a{
   line-height: 100px;
@@ -36,4 +37,10 @@ section.footer{
   width: 100%;
   text-align: center;
   align-items: center;
+}
+section.footer a:hover{
+color: red;
+}
+section.footer a {
+color: white;
 }

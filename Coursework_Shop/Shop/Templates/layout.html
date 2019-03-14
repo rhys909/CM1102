@@ -9,15 +9,15 @@
 
 <body>
   <nav>
-    <a href="{{ url_for('home') }}" class="header">Home</a>&nbsp|
-    <a href="{{ url_for('about') }}" class="header">About</a>&nbsp|
-    <a href="{{ url_for('shop') }}" class="header">Shop</a>
+    <a href="{{ url_for('home') }}" class="header" style="float: left;">Home</a>&nbsp|
+    <a href="{{ url_for('about') }}" class="header"style="float: left;">About</a>&nbsp|
+    <a href="{{ url_for('shop') }}" class="header"style="float: left;">Shop</a>
     {% if current_user.is_authenticated %}
     Hello, {{ current_user.username }}!
-    <a class="nav-item nav-link" href="{{ url_for('logout') }}">Logout</a>&nbsp|
+    <a class="nav-item nav-link" href="{{ url_for('logout') }}" style="float: right;">Logout</a>&nbsp|
     {% else %}
-    Welcome, Guest &nbsp| <a href="{{ url_for('login') }}">Login&nbsp;</a>
-    or <a href="{{ url_for('sign_up') }}">Sign Up</a>&nbsp|
+    Welcome, Guest &nbsp| <a href="{{ url_for('login') }}" style="float: right;">Login&nbsp;</a>
+    or <a href="{{ url_for('sign_up') }}" style="float: right;">Sign Up</a>&nbsp|
     {% endif %}
   </nav>
 
