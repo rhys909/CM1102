@@ -2,25 +2,32 @@
 {% block content %}
 <form method="POST" action="">
   {{ form.csrf_token }}
-    <section class="">
-      {{ form.username.label }} {{ form.username}}
-    </section>
-    <section class="">
-      {{ form.email.label }} {{ form.email}}
-    </section>
-    <section class="">
-      {{ form.password.label }} {{ form.password}}
-    </section>
-    <section class="">
-      {{ form.confirm_password.label }} {{ form.confirm_password}}
-    </section>
-    <section class="">
-      {{ form.submit() }}
-    </section>
-  {% for error in form.username.errors %}
-    <span style="color: red;">[{{ error }}]</span>
+  <section class="">
+    {{ form.username.label }} {{ form.username}}
+    {% for error in form.username.errors %}
+      <span style="color: red;">[{{ error }}]</span>
     {% endfor %}
-  {% for error in form.password.errors %}
-    <span style="color: red;">[{{ error }}]</span>
+  </section>
+  <section class="">
+    {{ form.email.label }} {{ form.email}}
+    {% for error in form.email.errors %}
+      <span style="color: red;">[{{ error }}]</span>
     {% endfor %}
+  </section>
+  <section class="">
+    {{ form.password.label }} {{ form.password}}
+    {% for error in form.password.errors %}
+      <span style="color: red;">[{{ error }}]</span>
+    {% endfor %}
+  </section>
+  <section class="">
+    {{ form.passwordVerify.label }} {{ form.passwordVerify}}
+    {% for error in form.passwordVerify.errors %}
+      <span style="color: red;">[{{ error }}]</span>
+    {% endfor %}
+  </section>
+  <section class="">
+    {{ form.submit() }}
+  </section>
+</form>
 {% endblock content %}

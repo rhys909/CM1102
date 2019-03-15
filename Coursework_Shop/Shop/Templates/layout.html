@@ -21,21 +21,6 @@
     {% endif %}
   </nav>
 
-  <section class="image">
-
-  </section>
-
-  <section id="content">
-    {% block content %}
-    {% endblock %}
-  </section>
-  <section class="footer">
-    <p><strong>© 2k18 Rhys Connor</strong><br>
-       Insta: <a href="https://www.instagram.com/rhys.connor/?hl=en">@rhys.connor</a> <br>
-       Facebook: <a href="https://www.facebook.com/rhyskconnor99">Rhys Connor</a><br>
-       LinkedIn: <a href="https://www.linkedin.com/in/rhys-c-7b206b128">Rhys Connor</a>
-    </p>
-  </section>
   <div>
     {% with messages = get_flashed_messages() %}
     {% if messages %}
@@ -47,5 +32,23 @@
       {% endif %}
       {% endwith %}
   </div>
+
+  <section class="image">
+
+  </section>
+
+  <section id="content">
+    {% block content %}
+    {% endblock %}
+  </section>
+
+  <section class="footer">
+    <p><strong>© 2k18 Rhys Connor</strong><br>
+       Insta: <a href="https://www.instagram.com/rhys.connor/?hl=en">@rhys.connor</a> <br>
+       Facebook: <a href="https://www.facebook.com/rhyskconnor99">Rhys Connor</a><br>
+       LinkedIn: <a href="https://www.linkedin.com/in/rhys-c-7b206b128">Rhys Connor</a>
+    </p>
+  </section>
+  
 </body>
 </html>

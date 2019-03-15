@@ -24,7 +24,7 @@ def shop():
 
 @app.route("/sign_up", methods=['GET', 'POST'])
 def sign_up():
-    form = sign_up_form
+    form = sign_up_form()
     if request.method == 'POST':
         user = User(username=form.username.data, email=form.email.data, password=form.password.data)
         db.session.add(user)
