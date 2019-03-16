@@ -1,4 +1,3 @@
-from datetime import datetime
 from Shop import db, login_manager
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import UserMixin
@@ -6,7 +5,7 @@ from flask_login import UserMixin
 class Manufacturer(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(30), nullable=False)
-    items = db.relationship('item', backref='Manufacturer', lazy=True)
+    part = db.relationship('item', backref='manufacturer', lazy=True)
 
     def __repr__(self):
         return f"Manufacturer('{self.name}')"
@@ -19,7 +18,7 @@ class Part(db.Model):
     price = db.Column(db.Numeric(10,2), nullable=False)
     image_file = db.Column(db.String(20), nullable=False, default='No_Image.png')
     stock_level = db.Column(db.Integer, nullable=False)
-    Manufacturer_ID = db.Column(db.Integer, db.ForeignKey('Manufacturer.id'), nullable=False)
+    Manufacturer_ID = db.Column(db.Integer, db.ForeignKey('manufacturer.id'), nullable=False)
 
     def __repr__(self):
         return f"Item('{self.name}', '{self.description}', '{self.price}', '{self.stock_level}')"
@@ -48,3 +47,10 @@ class User(UserMixin, db.Model):
 @login_manager.user_loader
 def load_user(user_id):
     return User.query.get(int(user_id))
+
+#If you want your cart to be stored in db, specify a model for it here, e.g.
+# class Cart(db.Model):
+#     id = db.Column(db.Integer, primary_key=True)
+#     quantity = db.Column(db.Integer)
+#     book_id = db.Column(db.Integer, db.ForeignKey('book.id'), nullable=False)
+#     etc. ....
