@@ -5,7 +5,7 @@ from flask_login import UserMixin
 class Manufacturer(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(30), nullable=False)
-    part = db.relationship('item', backref='manufacturer', lazy=True)
+    part = db.relationship('Part', backref='manufacturer', lazy=True)
 
     def __repr__(self):
         return f"Manufacturer('{self.name}')"
@@ -21,7 +21,7 @@ class Part(db.Model):
     Manufacturer_ID = db.Column(db.Integer, db.ForeignKey('manufacturer.id'), nullable=False)
 
     def __repr__(self):
-        return f"Item('{self.name}', '{self.description}', '{self.price}', '{self.stock_level}')"
+        return f"Part('{self.name}', '{self.description}', '{self.price}', '{self.stock_level}')"
 
 class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -44,9 +44,9 @@ class User(UserMixin, db.Model):
     def verify_password(self, password):
         return check_password_hash(self.password_hash, password)
 
-@login_manager.user_loader
-def load_user(user_id):
-    return User.query.get(int(user_id))
+    @login_manager.user_loader
+    def load_user(user_id):
+        return User.query.get(int(user_id))
 
 #If you want your cart to be stored in db, specify a model for it here, e.g.
 # class Cart(db.Model):

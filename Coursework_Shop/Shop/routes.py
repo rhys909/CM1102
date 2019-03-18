@@ -1,5 +1,5 @@
 import os
-from flask import render_template, url_for, request, redirect, flash
+from flask import render_template, url_for, request, redirect, flash, session
 from Shop import app, db
 from Shop.models import Manufacturer, Part, User
 from Shop.form import sign_up_form, login_form
@@ -20,12 +20,13 @@ def item_page():
     return render_template('item_page.html', title='PC Store - Items')
 @app.route("/shop")
 def shop():
-    return render_template('shop.html', title='PC Store - Shop')
+    part = Part.query.all()
+    return render_template('shop.html', title='PC Store - Shop', part=part)
 
 @app.route("/sign_up", methods=['GET', 'POST'])
 def sign_up():
     form = sign_up_form()
-    if request.method == 'POST':
+    if form.validate_on_submit():
         user = User(username=form.username.data, email=form.email.data, password=form.password.data)
         db.session.add(user)
         db.session.commit()
@@ -39,6 +40,7 @@ def login():
         user = User.query.filter_by(email=form.email.data).first()
         if user is not None and user.verify_password(form.password.data):
             login_user(user)
+            flash("Login successful!!")
             return redirect(url_for('home'))
         else:
             flash("Invalid username or password!")

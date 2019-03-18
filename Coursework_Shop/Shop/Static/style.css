@@ -3,6 +3,8 @@ body{
   color: white;
   margin: 0;
   padding: 0;
+  clear: both;
+  font-family: 'Oswald', sans-serif;
 }
 nav {
     float: right;
@@ -12,6 +14,9 @@ nav {
     background-color: #2071a6;
     width: 100%;
     padding-bottom: 0;
+    border-top: 0;
+    clear: inherit;
+    font-family: inherit;
 }
 nav a{
   color: white;
@@ -26,23 +31,33 @@ nav a:hover {
 nav a:active{
   color: purple;
 }
-section.content{
-  padding-left: 10px;
+#content{
+  clear: inherit;
+  align-items: center;
+  position: absolute;
+  font-family: inherit;
 }
-section.content h1{
+#content h1{
+  font-size: 40px;
   padding-left: 5px;
+  text-align: center;
+  font-family: inherit;
 }
-section.content p{
+#content p{
+
   padding-left: 10px;
+  text-align: center;
+  font-family: inherit;
 }
-section.image{
-  width: 100%;
-  height: 350px;
+.image{
   background: url(background.jpg);
+  background-size: cover;
   background-repeat: no-repeat;
-  background-size: 100%;
+  width: 100%;
+  height: 300px;
+  clear: inherit;
 }
-section.footer{
+.footer{
   background-color: #2071a6;
   border-bottom: none;
   color: white;
@@ -53,11 +68,12 @@ section.footer{
   bottom: 0;
   margin: 0;
   padding: 0;
+  clear: inherit;
 }
-section.footer a:hover{
+.footer a:hover{
 color: red;
 }
-section.footer a {
+.footer a {
 color: white;
 text-decoration: none;
 }
