@@ -9,19 +9,17 @@ from flask_login import login_user, current_user, logout_user, login_required
 
 @app.route("/home")
 def home():
-    return render_template('home.html',  title='PC Store - Home')
+    parts = Part.query.all()
+    return render_template('home.html', parts=parts, title='PC Store - Home')
 
 @app.route("/about")
 def about():
     return render_template('about.html', title='PC Store - About')
 
-@app.route("/item_page")
-def item_page():
-    return render_template('item_page.html', title='PC Store - Items')
-@app.route("/shop")
-def shop():
-    part = Part.query.all()
-    return render_template('shop.html', title='PC Store - Shop', part=part)
+@app.route("/part/<int:part_id>")
+def part(part_id):
+    part = Part.query.get_or_404(part_id)
+    return render_template('part.html', part=part, title='PC Store - {{ part.name }}')
 
 @app.route("/sign_up", methods=['GET', 'POST'])
 def sign_up():
@@ -56,15 +54,17 @@ def logout():
 def add_to_basket(part_id):
     if "basket" not in session:
         session["basket"] = []
+
     session["basket"].append(part_id)
+    
     flash("The item has been added to your shopping basket!")
     return redirect("/basket")
 
 @app.route("/basket", methods=['GET', 'POST'])
 def basket_display():
-    if "cart" not in session:
+    if "basket" not in session:
         flash('There is nothing in your basket!')
-        return render_template("basket.html")
+        return render_template("basket.html", display_basket = {}, total = 0)
     else:
         items = session["basket"]
         cart = {}
@@ -72,7 +72,7 @@ def basket_display():
         total_price = 0
         total_quantity = 0
         for item in items:
-            part = Items.query.get_or_404(item)
+            part = Part.query.get_or_404(part)
             total_price += part.price
             if part.id in cart:
                 basket[part.id]["quantity"] += 1

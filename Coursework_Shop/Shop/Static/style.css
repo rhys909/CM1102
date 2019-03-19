@@ -7,7 +7,7 @@ body{
   font-family: 'Oswald', sans-serif;
 }
 nav {
-    float: right;
+    font-size: 20px;
     margin: 0;
     padding: 0;
     display: flex;
@@ -36,6 +36,10 @@ nav a:active{
   align-items: center;
   position: absolute;
   font-family: inherit;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: none;
 }
 #content h1{
   font-size: 40px;
@@ -44,10 +48,20 @@ nav a:active{
   font-family: inherit;
 }
 #content p{
-
+  color: white;
   padding-left: 10px;
   text-align: center;
   font-family: inherit;
+  clear: both;
+}
+#content a p{
+  text-decoration: none;
+  color: white;
+}
+#content img{
+  height: 200px;
+  width: 200px;
+
 }
 .image{
   background: url(background.jpg);
@@ -68,7 +82,7 @@ nav a:active{
   bottom: 0;
   margin: 0;
   padding: 0;
-  clear: inherit;
+  clear: both;
 }
 .footer a:hover{
 color: red;

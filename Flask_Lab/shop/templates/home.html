@@ -1,5 +1,12 @@
 {% extends "layout.html" %}
 {% block content %}
-<h1>Welcome to My Shop</h1>
-<p>This shop is for my CM1102 Web Applications.</p>
+  <h1>My PC Shop</h1>
+
+  {% for part in parts %}
+  <a href="{{ url_for('part', part_id=part.id) }}"><img style="height:100px; width:100px;" src = "{{ url_for('static', filename= 'img/' + part.image_file) }}"></a>
+    <a href="{{ url_for('part', part_id=part.id) }}">
+      <p>"{{ part.name }}"</p></a>
+    <p>Price: {{ part.price }}</p>
+    <a href="/add_to_basket/{{ part.id }}" style="background-color:white; background-radius:5px;">Add to basket</a>
+  {% endfor %}
 {% endblock content %}
