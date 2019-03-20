@@ -1,7 +1,16 @@
 {% extends "layout.html" %}
 {% block content %}
-<img src="{{ url_for('static' filename= part.image_file)}}">
-<p>"{{ part.title }}" &nbsp </p>
-<p>Price: {{ part.price }}</p>
-<p>Description: <br> {{ part.description }}</p>
+<div class="item-container">
+  <div class="item-image">
+    <img src="{{ url_for('static' filename= part.image_file)}}">
+  </div>
+  <div class="item-info">
+    <h1>{{ part.name }} &nbsp </h1>
+  </div>
+  <<div class="item-info">
+    <p>Price: {{ part.price }}</p>
+    <p>Description: <br> {{ part.description }}</p>
+    <p><a href="/add_to_basket/{{ part.id }}" style="background-color:white; border-radius:5px;">Add to basket</a></p>
+  </div>
+</div>
 {% endblock content %}

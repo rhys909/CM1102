@@ -17,6 +17,7 @@ nav {
     border-top: 0;
     clear: inherit;
     font-family: inherit;
+    position: sticky;
 }
 nav a{
   color: white;
@@ -31,45 +32,63 @@ nav a:hover {
 nav a:active{
   color: purple;
 }
-#content{
-  position: absolute;
+.content{
   font-family: inherit;
-  display: block;
-  width: 30%;
-  margin-left: 35%;
-  margin-right: 35%;
   text-decoration: none;
-  padding-bottom: 150px;
+  width: 100%;
+  padding-bottom: 30px;
 }
 
-#content h1{
+.shop-container{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.content h1{
   font-size: 40px;
   padding-left: 5px;
   text-align: center;
   font-family: inherit;
+  width: 30%;
+  margin-left: 35%;
+  margin-right: 35%;
 }
-#content p{
+.item p{
   color: white;
   padding-left: 10px;
   text-align: center;
   font-family: inherit;
-
 }
-#content p a{
+.item p a{
   text-decoration: none;
   color: black;
 }
-#content a p{
+.item a p{
   text-decoration: none;
   color: white;
 }
-#content img{
+.item img{
   display: block;
   width: 30%;
   height: auto;
   align-items: center;
   margin-left: auto;
   margin-right: auto;
+}
+.item-container{
+  display: grid;
+  grid-template-columns: auto auto;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.item-info{
+  font-size: 30px;
+  color: white;
+  text-align: justify;
+}
+.item-image{
+  grid-row: 1 / 2;
 }
 .image{
   background: url(background.jpg);
@@ -86,10 +105,7 @@ nav a:active{
   width: 100%;
   text-align: center;
   align-items: center;
-  position: fixed;
-  bottom: 0;
-  margin: 0;
-  padding: 0;
+  position: absolute;
   clear: both;
 }
 .footer a:hover{

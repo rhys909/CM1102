@@ -2,13 +2,15 @@
 {% block content %}
 
 <h1>My PC Shop</h1>
+<div class="shop-container">
 
-    {% for part in parts %}
+  {% for part in parts %}
+  <div class="item">
     <a href="{{ url_for('part', part_id=part.id) }}"><img style="height:100px; width:100px;" src = "{{ url_for('static', filename= 'img/' + part.image_file) }}"></a>
       <a href="{{ url_for('part', part_id=part.id) }}" style="text-decoration: none;">
         <p>{{ part.name }}</p></a>
         <p>Price: {{ part.price }} <a href="/add_to_basket/{{ part.id }}" style="background-color:white; border-radius:5px;">Add to basket</a></p>
-
-    {% endfor %}
-
+  </div>
+  {% endfor %}
+</div>
 {% endblock content %}

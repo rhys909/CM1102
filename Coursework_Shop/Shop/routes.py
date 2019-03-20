@@ -19,7 +19,7 @@ def about():
 @app.route("/part/<int:part_id>")
 def part(part_id):
     part = Part.query.get_or_404(part_id)
-    return render_template('part.html', part=part, title='PC Store - {{ part.name }}')
+    return render_template('part.html', part=part, title='PC Store Item')
 
 @app.route("/sign_up", methods=['GET', 'POST'])
 def sign_up():
@@ -83,7 +83,7 @@ def basket_display():
 
         return render_template("basket.html", title='Your Shopping Basket', display_basket = basket, total = total_price, total_quantity = total_quantity)
     return render_template("basket.html")
-    
+
 @app.route("/delete_item/<int:item_id>", methods=['GET', 'POST'])
 def delete_item(item_id):
     if "basket" not in session:
@@ -92,3 +92,6 @@ def delete_item(item_id):
     flash("You have removed an item from your basket!")
     session.modified = True
     return redirect("/basket")
+
+#@app.route("/checkout")
+#def checkout():
