@@ -1,0 +1,7 @@
+{% extends "layout.html" %}
+{% block content %}
+<img src="{{ url_for('static' filename= part.image_file)}}">
+<p>"{{ part.title }}" &nbsp </p>
+<p>Price: {{ part.price }}</p>
+<p>Description: <br> {{ part.description }}</p>
+{% endblock content %}

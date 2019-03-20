@@ -21,6 +21,10 @@
     {% endif %}
   </nav>
 
+  <section class="image">
+
+  </section>
+  
   <div>
     {% with messages = get_flashed_messages() %}
     {% if messages %}
@@ -33,14 +37,11 @@
       {% endwith %}
   </div>
 
-  <section class="image">
-
-  </section>
-
   <section id="content">
     {% block content %}
     {% endblock %}
   </section>
+
 
   <section class="footer">
     <p><strong>© 2k18 Rhys Connor</strong><br>

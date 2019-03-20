@@ -56,7 +56,7 @@ def add_to_basket(part_id):
         session["basket"] = []
 
     session["basket"].append(part_id)
-    
+
     flash("The item has been added to your shopping basket!")
     return redirect("/basket")
 
@@ -67,18 +67,28 @@ def basket_display():
         return render_template("basket.html", display_basket = {}, total = 0)
     else:
         items = session["basket"]
-        cart = {}
+        basket = {}
 
         total_price = 0
         total_quantity = 0
         for item in items:
-            part = Part.query.get_or_404(part)
+            part = Part.query.get_or_404(item)
+
             total_price += part.price
-            if part.id in cart:
+            if part.id in basket:
                 basket[part.id]["quantity"] += 1
             else:
-                basket[part.id] = {"quantity":1, "title": part.title, "price": part.price}
+                basket[part.id] = {"quantity":1, "name": part.name, "price": part.price}
             total_quantity = sum(item["quantity"] for item in basket.values())
 
-        return render_template("basket.html", title='Your Shopping Cart', display_basket = basket, total = total_price, total_quantity = total_quantity)
+        return render_template("basket.html", title='Your Shopping Basket', display_basket = basket, total = total_price, total_quantity = total_quantity)
     return render_template("basket.html")
+    
+@app.route("/delete_item/<int:item_id>", methods=['GET', 'POST'])
+def delete_item(item_id):
+    if "basket" not in session:
+        session["basket"]=[]
+    session["basket"].remove(item_id)
+    flash("You have removed an item from your basket!")
+    session.modified = True
+    return redirect("/basket")
