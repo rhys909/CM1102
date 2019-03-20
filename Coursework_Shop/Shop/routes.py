@@ -1,5 +1,5 @@
 import os
-from flask import render_template, url_for, request, redirect, flash, session
+from flask import render_template, url_for, request, redirect, flash, session, jsonify
 from Shop import app, db
 from Shop.models import Manufacturer, Part, User
 from Shop.form import sign_up_form, login_form
@@ -7,10 +7,11 @@ from flask_login import login_user, current_user, logout_user, login_required
 
 @app.route("/")
 
-@app.route("/home")
+@app.route("/home" methods=['GET', 'POST'])
 def home():
     parts = Part.query.all()
-    return render_template('home.html', parts=parts, title='PC Store - Home')
+    form = sort_items()
+    return render_template('home.html', parts=parts, form=form, title='PC Store - Home')
 
 @app.route("/about")
 def about():

@@ -86,9 +86,11 @@ nav a:active{
   font-size: 30px;
   color: white;
   text-align: justify;
+  float: right;
 }
-.item-image{
-  grid-row: 1 / 2;
+#item-image img{
+  width: 10%;
+  height: auto;
 }
 .image{
   background: url(background.jpg);

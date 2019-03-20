@@ -24,3 +24,6 @@ class login_form(FlaskForm):
     email = StringField('Email', validators=[DataRequired(), Email()])
     password = PasswordField('Password', validators=[DataRequired()])
     submit = SubmitField('Login')
+
+class sort_items(FlaskForm):
+    SortForm = SelectField('Part', choices=[('Price', 'Price Ascending'), ('name', 'Alphabetical'), ('category', 'Category')])

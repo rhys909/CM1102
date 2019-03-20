@@ -12,7 +12,7 @@
   <nav>
     <a href="{{ url_for('home') }}" style="float: left;">Home</a>&nbsp
     <a href="{{ url_for('about') }}" style="float: left;">About</a>&nbsp
-  
+    <a href="{{ url_for('basket_display') }}">Basket</a>
     {% if current_user.is_authenticated %}
     Hello, {{ current_user.username }}!
     <a class="nav-item nav-link" href="{{ url_for('logout') }}" style="float: right;">Logout</a>&nbsp
