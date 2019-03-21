@@ -25,5 +25,11 @@ class login_form(FlaskForm):
     password = PasswordField('Password', validators=[DataRequired()])
     submit = SubmitField('Login')
 
-class sort_items(FlaskForm):
-    SortForm = SelectField('Part', choices=[('Price', 'Price Ascending'), ('name', 'Alphabetical'), ('category', 'Category')])
+class checkout_form(FlaskForm):
+    first_name = StringField('First Name', validators=[DataRequired('Please enter your first name.'), Length(min=3, max=15)])
+    last_name = StringField('Last Name', validators=[DataRequired('Please enter your last name.'), Length(min=3, max=15)])
+    address_line_1 = StringField('Address Line 1', validators=[DataRequired('Please enter your address'), Length(min=5, max=30)])
+    address_line_2 = StringField('Address Line 2')
+    address_line_3 = StringField('Address Line 3')
+    county = StringField('County', validators=[DataRequired('Please enter your county!'), Length(min=3, max=26)])
+    postcode = StringField('Postcode', validators=[DataRequired('Please enter your postcode!', length(min=5, max=7)])

@@ -2,16 +2,15 @@ import os
 from flask import render_template, url_for, request, redirect, flash, session, jsonify
 from Shop import app, db
 from Shop.models import Manufacturer, Part, User
-from Shop.form import sign_up_form, login_form
+from Shop.form import sign_up_form, login_form, sort_items
 from flask_login import login_user, current_user, logout_user, login_required
 
 @app.route("/")
 
-@app.route("/home" methods=['GET', 'POST'])
+@app.route("/home", methods=['GET', 'POST'])
 def home():
     parts = Part.query.all()
-    form = sort_items()
-    return render_template('home.html', parts=parts, form=form, title='PC Store - Home')
+    return render_template('home.html', parts=parts, title='PC Store - Home')
 
 @app.route("/about")
 def about():
@@ -20,7 +19,7 @@ def about():
 @app.route("/part/<int:part_id>")
 def part(part_id):
     part = Part.query.get_or_404(part_id)
-    return render_template('part.html', part=part, title='PC Store Item')
+    return render_template('item_page.html', part=part, title='PC Store Item')
 
 @app.route("/sign_up", methods=['GET', 'POST'])
 def sign_up():

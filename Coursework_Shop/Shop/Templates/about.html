@@ -1,8 +1,20 @@
 {% extends "layout.html" %}
 {% block content %}
 <h1>About Us</h1>
-<p> This is a computer parts store which I have built for my
+<p style="padding-left: 10px; text-align: center; font-size: 30px;"> This is a computer parts store which I have built for my
   Computer Science module CM1102 - Web Applications. This website was
-  built using a combination of HTML, CSS, Python and MySQL.
+  built using a combination of HTML, CSS, Python and MySQL.<br>
+  Below are some of the custom builds which I have completed.
 </p>
+<div class="about">
+  <div class="about-images">
+    <img src = "{{ url_for('static', filename= 'img/Custom1.jpg') }}">
+  </div>
+  <div class="about-images">
+    <img src = "{{ url_for('static', filename= 'img/Custom2.jpg') }}">
+  </div>
+  <div class="about-images">
+    <img src = "{{ url_for('static', filename= 'img/Custom3.jpg') }}">
+  </div>
+</div>
 {% endblock content %}

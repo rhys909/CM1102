@@ -82,15 +82,18 @@ nav a:active{
   padding-left: 5%;
   padding-right: 5%;
 }
-.item-info{
+#item-info{
+  width: 40%;
   font-size: 30px;
   color: white;
-  text-align: justify;
-  float: right;
+  float: left;
+  position: absolute;
+  padding-left: 50%;
 }
 #item-image img{
-  width: 10%;
-  height: auto;
+  width: 50%;
+  height: ;
+  grid-row: 1/2;
 }
 .image{
   background: url(background.jpg);
@@ -116,4 +119,29 @@ color: red;
 .footer a {
 color: white;
 text-decoration: none;
+}
+.flash{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 38%;
+  padding-right: 35%;
+  text-align: center;
+}
+.flash ul {
+  list-style: none;
+  font-size: 30px;
+  color: #2071a6;
+}
+.about{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+.about-images img{
+  width: 96%;
+  height: 100vh;
+  image-orientation: from-image;
+  padding-left: 2%;
+  padding-right: 2%;
 }

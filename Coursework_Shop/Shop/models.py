@@ -21,7 +21,7 @@ class Part(db.Model):
     Manufacturer_ID = db.Column(db.Integer, db.ForeignKey('manufacturer.id'), nullable=False)
 
     def __repr__(self):
-        return f"Part('{self.name}', '{self.description}', '{self.price}', '{self.stock_level}')"
+        return f"Part('{self.name}', '{self.description}', '{self.price}', '{self.stock_level}', '{self.category}')"
 
 class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
